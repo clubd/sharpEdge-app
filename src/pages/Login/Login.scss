@@ -1,0 +1,116 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.login {
+
+    &__page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: $color-dark-blue;
+    }
+
+
+    &__container {
+        background-color: $color-dark-blue;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+
+        @include desktop {
+            max-width: 460px;
+            padding: 3rem;
+        }
+    }
+
+    &__logo {
+        width: 100px;
+        margin-bottom: 1rem;
+    }
+
+    &__join {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: $color-yellow;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    &__join:hover {
+        text-decoration: underline;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1px solid $color-neutral;
+        border-radius: 24px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        font-family: $font-primary;
+        border: 2px solid $color-yellow;
+        border-radius: 24px;
+        background-color: white;
+        color: $color-black-soft;
+
+    }
+
+    &__reset {
+        font-size: 0.85rem;
+        color: $color-dark-blue;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &__btn {
+            background-color: $color-ice;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darken($color-ice, 8%);
+            }
+        }
+    }
+}
+
+
+.visually {
+    &__hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+}
