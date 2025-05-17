@@ -7,8 +7,8 @@
     &__page {
         display: flex;
         justify-content: center;
-        align-items: center;
-        min-height: 100vh;
+        align-items: flex-start;
+        max-height: 100vh;
         background-color: $color-dark-blue;
     }
 
@@ -44,8 +44,14 @@
         font-size: 1rem;
     }
 
-    &__join:hover {
+    &:hover {
+        color: $color-wl;
         text-decoration: underline;
+    }
+
+    &__plus {
+        border: 2px solid $color-yellow;
+        border-radius: 50%;
     }
 
     &__form {
@@ -64,38 +70,39 @@
 
     &__input {
         width: 100%;
-        padding: 0.75rem 1rem;
+        padding: 0.5rem 0.5rem;
         font-size: 1rem;
         font-family: $font-primary;
         border: 2px solid $color-yellow;
-        border-radius: 24px;
+        border-radius: 12px;
         background-color: white;
         color: $color-black-soft;
+    }
 
+    &__btn {
+        background-color: $color-yellow;
+        color: #fff;
+        border: none;
+        border-radius: 24px;
+        padding: 0.75rem;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken($color-ice, 8%);
+        }
     }
 
     &__reset {
         font-size: 0.85rem;
-        color: $color-dark-blue;
+        color: $color-yellow;
         text-decoration: none;
+        display: flex;
+        justify-content: flex-end;
 
         &:hover {
-            text-decoration: underline;
-        }
-
-        &__btn {
-            background-color: $color-ice;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 0.75rem;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-                background-color: darken($color-ice, 8%);
-            }
+            text-decoration: none;
         }
     }
 }
