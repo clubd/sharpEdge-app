@@ -12,7 +12,7 @@ function Login() {
                         <img src={sharpEdgeLogo} alt="Sharp Edge Logo" className="login__logo" />
                     </div>
                     <a href="/register" className="login__join">
-                        <Plus size={16} /> Join
+                        <Plus className="login__plus" size={16} /> Join
                     </a>
                 </header>
                 <main>
@@ -26,7 +26,7 @@ function Login() {
                             <input className="login__input" type="password" id="password" name="password" placeholder="Password" />
                         </div>
                         <div className="reset__wrapper">
-                            <a href="#" className="login__reset">Forgot Password</a>
+                            <a href="#" className="login__reset">Forgot Password?</a>
                         </div>
                         <button type="submit" className="login__btn">Login</button>
                     </form>
